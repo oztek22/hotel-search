@@ -2,3 +2,22 @@
   height: calc(100vh - 56px);
   width: 100%;
 }
+
+section {
+  display: grid;
+  grid-template-columns: var(--page-margin) [center-start] 1fr [center-end] var( --page-margin);
+  position: relative;
+  left: 0;
+  max-width: 640px;
+}
+
+section>* {
+  grid-column: center;
+}
+
+.cards-wrapper {
+  grid-column: center-start / -1;
+  overflow: auto;
+  display: flex;
+  padding-bottom: 16px;
+}
