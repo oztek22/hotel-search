@@ -9,14 +9,20 @@ const Home = () => {
 	const defaultZoom = 14;
 	const [userLocation, setUserLocation] = useState(defaultLocation);
 
-	useEffect(() => {
+	useEffect(() => {	
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition((position) => {
+			const positionListener = navigator.geolocation.watchPosition((position) => {
 				if (Math.abs(position.coords.latitude - userLocation.lat) > 0.0001 || Math.abs(position.coords.longitude - userLocation.lng) > 0.0001) {
-					setUserLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
+					// setUserLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
+
+					// keeping my location as user location since my hard coded data is based on this location
+					setUserLocation({ lat: 48.12317792424179, lng: 11.59038177519047 });
+					// we can remove position listener before unmount as well
+					navigator.geolocation.clearWatch(positionListener);
 				}
-			});
+			}, (error) => console.warn('geolocation error: ', error));
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

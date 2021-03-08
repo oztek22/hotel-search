@@ -17,6 +17,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx-source": "^7.12.13",
     "enzyme": "^3.10.0",
     "enzyme-adapter-preact-pure": "^2.0.0",
     "eslint": "^6.0.1",
