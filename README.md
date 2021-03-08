@@ -1,5 +1,11 @@
 # hotel-search
 
+## PreRequisite
+
+- You need to set up your own google Maps credentials in `components/map/index.js` to make it run locally.
+- I've added logic to find the user's current location but commented it out and set it to center Munich since my sample data is based on Munich only.
+- I've added a comment stating send center and zoom value to backend and get corresponding hotel details accordingly and called dummy JSON, but in real-world we will fetch data from the backend based on the coordinates.
+
 ## CLI Commands
 
 ``` bash
