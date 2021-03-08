@@ -1,16 +1,5 @@
 [
-  {
-    "coordinates": {
-      "lat": 48.12317792424179, 
-      "lng": 11.59038177519047
-    },
-    "title": "Hotel Aurbacher",
-    "description": "3.4KM FROM THE CITY CENTER",
-    "id": 1,
-    "price": 52,
-    "priceDescription": "Designs may vary",
-    "image": "https://lh6.googleusercontent.com/proxy/Ah4dsOeZJIJUjHF2bcNIVCMNFiFGr2J1sazA6FsSnDaTKq4XdSCjq_VyXkF0BiTl4M3ggG7lNch0QCDRv2KXtSPQpDn6uGOPoJ1SkRdHdorDyemKS-mYLw675Luh8CBFr7aQ_rtUrBnoPUe404VeYqia1Y4O8A=w408-h282-k-no"
-  },
+  
   {
     "coordinates": {
       "lat": 48.12478185894112, 
@@ -22,5 +11,17 @@
     "price": 88,
     "priceDescription": "Designs may vary",
     "image": "https://lh5.googleusercontent.com/p/AF1QipPNzAm-O2Py8AxVpdd20dkC-vHj2Kghfkg8BzAd=w408-h272-k-no"
+  },
+  {
+    "coordinates": {
+      "lat": 48.12317792424179, 
+      "lng": 11.59038177519047
+    },
+    "title": "Hotel Aurbacher",
+    "description": "3.4KM FROM THE CITY CENTER",
+    "id": 1,
+    "price": 52,
+    "priceDescription": "Designs may vary",
+    "image": "https://lh6.googleusercontent.com/proxy/Ah4dsOeZJIJUjHF2bcNIVCMNFiFGr2J1sazA6FsSnDaTKq4XdSCjq_VyXkF0BiTl4M3ggG7lNch0QCDRv2KXtSPQpDn6uGOPoJ1SkRdHdorDyemKS-mYLw675Luh8CBFr7aQ_rtUrBnoPUe404VeYqia1Y4O8A=w408-h282-k-no"
   }
 ]

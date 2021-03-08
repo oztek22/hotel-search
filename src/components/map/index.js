@@ -41,15 +41,8 @@ export default class Map extends Component {
   }
 
   scrollTo(el) {
-    const elLeft = el.offsetLeft + el.offsetWidth;
-    const elParentLeft = el.parentNode.offsetLeft + el.parentNode.offsetWidth;
-
-    // check if element not in view
-    if (elLeft >= elParentLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scrollLeft = elLeft - elParentLeft;
-    } else if (elLeft <= el.parentNode.offsetLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scrollLeft = el.offsetLeft - el.parentNode.offsetLeft;
-    }
+    const marginLeft = 8;
+    el.parentNode.scrollLeft = el.offsetLeft - marginLeft;
   }
 
   render() {
