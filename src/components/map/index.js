@@ -24,15 +24,13 @@ export default class Map extends Component {
   }
 
   onChildMouseEnter = (childIndex) => {
-    const hotels = this.state.hotels;
-    hotels[childIndex].isHovered = true;
-    this.setState({ hotels });
+    this.setState({ activeHotel: this.state.hotels[childIndex].id });
+    this.scrollTo(document.getElementById(`hotel-${this.state.hotels[childIndex].id}`));
   }
 
   onChildMouseLeave = (childIndex) => {
-    const hotels = this.state.hotels;
-    hotels[childIndex].isHovered = false;
-    this.setState({ hotels });
+    this.setState({ activeHotel: -1 });
+    this.scrollTo(document.getElementById(`hotel-${this.state.hotels[childIndex].id}`));
   }
 
   onChildClick = (childIndex) => {

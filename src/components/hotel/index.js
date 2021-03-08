@@ -2,7 +2,7 @@ import { h } from 'preact';
 import style from './style.css';
 
 const Hotel = (props) => (
-  <div class={props.isActive || props.hotelData.isHovered ? style['active-card'] : style.card} id={`hotel-${props.hotelData?.id}`}>
+  <div class={props.isActive ? style['active-card'] : style.card} id={`hotel-${props.hotelData?.id}`}>
     <div class={style['card-info']}>
       <div class={style['card-img']}>
         <img src={props.hotelData?.image} alt="Paris" width="120" height="140" />
