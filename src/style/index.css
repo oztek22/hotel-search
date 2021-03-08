@@ -27,3 +27,7 @@ html, body {
 	height: 100vh;
 	max-width: 640px;
 }
+
+.gm-control-active {
+	display: none;
+}
