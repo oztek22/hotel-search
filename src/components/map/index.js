@@ -37,6 +37,19 @@ export default class Map extends Component {
 
   onChildClick = (childIndex) => {
     this.setState({ activeHotel: this.state.hotels[childIndex].id });
+    this.scrollTo(document.getElementById(`hotel-${this.state.hotels[childIndex].id}`));
+  }
+
+  scrollTo(el) {
+    const elLeft = el.offsetLeft + el.offsetWidth;
+    const elParentLeft = el.parentNode.offsetLeft + el.parentNode.offsetWidth;
+
+    // check if element not in view
+    if (elLeft >= elParentLeft + el.parentNode.scrollLeft) {
+      el.parentNode.scrollLeft = elLeft - elParentLeft;
+    } else if (elLeft <= el.parentNode.offsetLeft + el.parentNode.scrollLeft) {
+      el.parentNode.scrollLeft = el.offsetLeft - el.parentNode.offsetLeft;
+    }
   }
 
   render() {
@@ -67,7 +80,8 @@ export default class Map extends Component {
         <section style={{ top: `-${this.cardsWrapperHeight}px` }}>
           <div class={style['cards-wrapper']} ref={(elem) => this.cardsWrapperHeight = elem?.clientHeight ? elem.clientHeight : 277}>
             {this.state.hotels && this.state.hotels.map(hotelData => (
-              <Hotel hotelData={hotelData} id={hotelData.id} />
+              <Hotel hotelData={hotelData} id={hotelData.id}
+              isActive={this.state?.activeHotel === hotelData.id} />
             ))
             }
           </div>
